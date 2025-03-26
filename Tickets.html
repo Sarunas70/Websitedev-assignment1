@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Tickets</title>
+    <link rel="stylesheet" href="./css/styles.css">
+    
+</head>
+<div>
+    <div class="CoolFont wave3" style="padding-left: 40%; padding-right: 40%; background-color: rgb(255, 153, 21);">
+        <h1>SETU Summer Festival Tickets</h1>
+        <h2>August 19-21, 2024</h2>
+       
+        <form class="backBtn"><input type="button" value="Go back!" onclick="history.back()"></form>
+        
+    </div>
+    
+    
+    <table id="ticketTable" class="align-table">
+        <thead>
+            <tr>
+                <th>Days</th>
+                <th>Ticket</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+
+    
+    <form id="ticketForm">
+        <div class="form-row">
+            <label for="days">Days</label>
+            <select name="days" id="days">
+                <option value="Day1">Day 1 (Tuesday 19th)</option>
+                <option value="Day2">Day 2 (Wednesday 20th)</option>
+                <option value="Day3">Day 3 (Thursday 21st)</option>
+            </select>
+        </div>
+
+        <div class="form-row">
+            <label for="ticket">Tickets</label>
+            <select name="ticket" id="ticket">
+                <option value="Regular Ticket">Regular Ticket</option>
+                <option value="VIP Ticket">VIP Ticket</option>
+                <option value="Camping Ticket">Camping Ticket</option>
+                <option value="Influencer Ticket">Influencer Ticket</option>
+            </select>
+        </div>
+
+        <div class="form-row">
+            <button type="submit" >Add Ticket</button>
+            <button type="button" id="removeTicketBtn">Remove Last Ticket</button>
+            <button type="button" id="TotalBtn">Submit Order</button>
+            <T></T>
+        </div>
+
+
+        
+    </form>
+    <div id="cardInfoContainer" style="display: none;">
+        <form id="cardInfo">
+            <div>
+                <div class="inputcontrol">
+                    <label for="Name">Full Name</label>
+                    <input type="text" name="CardName" id="Name" required>
+                    
+                </div>
+                <div class="inputcontrol">
+                    <label for="CardNumbers">Card Numbers</label>
+                    <input type="text" name="CardNumbers" id="CardNumbers" required>
+                    
+                </div>
+                <div class="inputcontrol">
+                    <label for="date">Expiration Date</label>
+                    <input type="month" name="date" id="date" required>
+                    
+                </div>
+                <div class="inputcontrol">
+                    <label for="cvv">CVV</label>
+                    <input type="password" name="cvv" id="cvv" required>
+                    
+                </div>
+            </div>
+            <button type="submit" id="PayBtn" class="PayBtn">Pay now</button>
+        </form>
+    </div>
+        
+
+    <script src="script/ticket.js"></script>
+
+    
+</body>
+</html>
